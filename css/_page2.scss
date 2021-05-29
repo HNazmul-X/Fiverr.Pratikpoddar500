@@ -1,0 +1,84 @@
+$primary-color: #0b6814;
+$primary-color-light: #66964c;
+$primary-color-verylight: #d8ebd5;
+$primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #66964c 105.66%);
+
+.disabled {
+    opacity: 0.7;
+    cursor: not-allowed !important;
+    filter: grayscale(100%);
+}
+
+#header-part-page-2 {
+    background: $primary-gradient;
+    position: relative;
+    button.analysis {
+        background: white;
+        color: $primary-color;
+        border: none;
+        padding: 3px 20px;
+        font-weight: 500;
+        font-size: 18px;
+        border-radius: 50px;
+    }
+
+    section#header-content {
+        .weakend-offer {
+            background: $primary-color-verylight;
+        }
+    }
+
+    .shape-divide {
+        position: absolute;
+        bottom: -1px;
+        width: 100%;
+        left: 0px;
+    }
+}
+
+
+
+main#page_2 {
+    #carousel-1_2 {
+        background: url(../images/page-2-circel-background.svg) no-repeat top left;
+        background-size: cover;
+
+        [id*="catagory_"] {
+            padding:2rem 0px;
+            .mySwiper_page_2_ctg_1 {
+                .swiper-slide.quize-card-page-2 {
+                    height: 238px;
+                    background: $primary-color-verylight;
+                    background: #d8ebd5;
+                    border: 2px solid #bde2b6;
+                    box-sizing: border-box;
+                    box-shadow: 0px 1px 2px 2px #cbcbcb;
+                    border-radius: 11px;
+                    overflow: hidden;
+                    
+                    .wrapper_p2SchCH{
+                        position: relative;
+                        width:100%;
+                        height:180px;
+                        z-index: 1;
+                        button.theme-btn-reverse{
+                            position: absolute;
+                            top:56%;
+                            left:50%;
+                            transform: translate(-50%, -50%);
+                        }
+                        img.quize-img_DISH{
+                            position: absolute;
+                            z-index: -1;
+                            width:100%;
+                            height:100%;
+                            object-fit: cover;
+
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

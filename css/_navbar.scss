@@ -1,0 +1,165 @@
+/* navbar styles here */
+.hnazmul-navbar {
+    color:white;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    .hnazmul-navbar-container {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        .hnazmul-nav-brand {
+            padding-right: 20px;
+        }
+        .hnazmul-nav-toggle-btn {
+            display: none;
+            button {
+                border: none;
+            }
+            img.toggler-btn {
+                width: 20px;
+            }
+        }
+        .hnazmul-navbar-content {
+            flex-basis: auto;
+            display: flex;
+            margin-left: auto;
+            
+            .hnazmul-navbar-content-wrapper {
+                display: flex;
+                flex-basis: auto;
+                ul.navbar-list {
+                    display: flex;
+                    margin-bottom: 0px !important;
+                    width: 100%;
+                    li.navbar-list-item {
+                        list-style: none;
+                        .navbar-list-link {
+                            color: inherit;
+                            text-decoration: none;
+                            display: inline-block;
+                            padding: 10px 20px;
+                            button{
+                                color:inherit;
+                            }
+                        }
+                    }
+                }
+                button.navbar-closer-icon {
+                    border: none;
+                    background: none;
+                    display: none;
+                    transition: 0.5s;
+                    &.rotate{
+                        transform: rotate(180deg);
+                    }
+                    img.navbar-closer {
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .hnazmul-navbar {
+        .hnazmul-navbar-container {
+            max-width: 650px;
+            @media screen and (max-width: 650px) {
+                padding: 0 10px;
+            }
+            .hnazmul-nav-logo {
+            }
+            .hnazmul-nav-toggle-btn {
+                display: block;
+                margin-left: auto;
+            }
+            .hnazmul-navbar-content {
+                display: block;
+                position: fixed;
+                z-index: 500;
+                height: 100%;
+                width: 100%;
+                background: rgba(33, 35, 36, 0.479);
+                top: 0px;
+                left: -120%;
+                transition: 0.6s;
+                clip-path: circle(0.2% at 0 0);
+                &.navbar-show {
+                    left: 0px;
+                    clip-path: circle(141.4% at 0 0);
+                }
+                .hnazmul-navbar-content-wrapper {
+                    width: 100%;
+                    height:100%;
+                    position: relative;
+                    ul.navbar-list {
+                        display: block;
+                        background:rgb(15, 26, 17);
+                        width:80%;
+                        li.navbar-list-item {
+                            text-align: center;
+                            .navbar-list-link {
+                            }
+                        }
+                    }
+                    button.navbar-closer-icon {
+                        position: absolute;
+                        top:10px;
+                        right:10px;
+                        padding:10px;
+                        display: block;
+                        background:white;
+                        border-radius: 50%;
+                        &:hover{
+                            background:rgb(255, 0, 85);
+                        }
+                        img.navbar-closer {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#hnazmul-toogle-content-area{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    
+    .hnazmul-toggler-icon{
+        cursor: pointer;
+        color:white;
+    }
+    .hnazmul-toggler-content{
+        height:0;
+        width:0;
+        transition: all 0.3s;
+        background:white;
+        position: absolute;
+        border:2px solid rgb(234, 234, 247);
+        box-shadow: 5px 5px 30px -5px rgba(155, 155, 187, 0.397),  -5px 0px 30px -5px rgba(155, 155, 187, 0.397);;
+        right:0px;
+        opacity: 0;
+        border-radius: 5px;
+        &>*{
+            display: none;
+        }
+        &.left{
+            &>*{
+                display: flex;
+            }
+            top:99%;
+            right:0%;
+            height:300px;
+            width:150px;
+            opacity: 1;
+        }
+    }
+}

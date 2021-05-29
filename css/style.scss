@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap");
+
+$primary-color: #388e3c;
+$primary-gredient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #66964c 105.66%);
+$Primary-text: #ffffff;
+html{
+   width: 100%;
+   overflow-x: hidden;
+    
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* cusotm utilites */
+
+
+
+
+/* header start from here */
+header#header-part {
+    background: $primary-gredient;
+
+    #header-content-part {
+        .bee-logo-lg {
+            img {
+                transform: translate(-14px, 60px);
+                @media screen and (max-width: 800px) {
+                    transform: translate(1px, 38px) scale(1.3);
+                }
+            }
+        }
+    }
+    .cloud-wrapper {
+        position: relative;
+        z-index: 1;
+        height: 300px;
+        transform: translate(-118px, -29px);
+        @media screen and (max-width: 800px) {
+            transform: translate(-31px, 2px);
+        }
+        .cloud-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+        }
+        .cloud-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            display: grid;
+            place-items: center;
+            z-index: 1;
+        }
+    }
+}
+.shape-cutter {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+
+.svg-cutter {
+    mask: url("../images/wave.svg");
+    mask-position: top;
+    mask-size: cover;
+    height: 200px;
+    width: 100%;
+    background: $primary-gredient;
+    filter: drop-shadow(2px 3px 10px black);
+}
+
+/* navbar stylesheet */
+@import "navbar";
+/* quize card section here */
+
+section#quizes-card {
+    background: #d2f8d2;
+    .all-quizes-card-area {
+        .quize-card {
+            height: 250px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            border: 2px solid #cbe2cb;
+            box-shadow: 0 3.5px 5.3px #00251c0d, 0 11.6px 17.9px #01352808, 0 52px 80px #002b1c05;
+            border-radius: 10px;
+
+            &:hover {
+                .quize-card-hidden {
+                    opacity: 1;
+                    pointer-events: all;
+                    left: 0px;
+                }
+            }
+            .quize-card-img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0px;
+                left: 0px;
+                z-index: 1;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .quize-card-hidden {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                background: rgba(9, 70, 9, 0.459);
+                display: grid;
+                place-items: center;
+                opacity: 0;
+                pointer-events: none;
+                transition: 0.5s;
+                left: -30%;
+                @media screen and (max-width:767px) {
+                    opacity: 1;
+                    pointer-events: all;
+                    left: 0px;
+                }
+            }
+        }
+    }
+}
+
+#testomonials_section {
+    background: url(../images/circle-shape-many.svg) repeat;
+    background-size: 30%;
+}
+
+/* footer part start from here */
+#footer-section {
+    position: relative;
+    color: $Primary-text;
+    .footer-shape-bg {
+        background: $primary-gredient;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        clip-path: polygon(0 0, 100% 44%, 100% 100%, 0% 100%);
+    }
+    .col-md-4 {
+        padding: 0px;
+        height: 100%;
+    }
+    .contact-us {
+        padding: 50px;
+        padding-top: 20px;
+        background: white;
+        box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.411);
+        margin-bottom: 20px;
+        border-radius: 20px;
+        color: black;
+    }
+}
+
+
+/* animation fade in */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        pointer-events: none;
+    }
+    to {
+        opacity: 1;
+        pointer-events: 1;
+    }
+}
+
+// imported file
+@import "swiperSlide";
+@import "page2";
+@import "util";
+@import "FooterWithNavsAndEmailSubs"
