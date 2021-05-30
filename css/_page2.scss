@@ -26,6 +26,26 @@ $primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #669
         .weakend-offer {
             background: $primary-color-verylight;
         }
+
+        .bee-and-cloud{
+            margin-bottom: 5rem;;
+            align-items: center;
+            div.bee{
+                text-align: center;
+                img{
+                    width:240px;
+                }
+            }
+            div.cloud{
+                position: relative;
+                height:200px;
+                img{
+                    position: absolute;
+                    width:100%;
+                    height:100%;
+                }
+            }
+        }
     }
 
     .shape-divide {
