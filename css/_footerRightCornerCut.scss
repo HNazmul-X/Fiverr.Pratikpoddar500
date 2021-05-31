@@ -7,6 +7,8 @@
     position: relative;
     color: $primary-color;
     z-index: 1;
+     background: url(../images/circle-shape-many.svg) repeat;
+    background-size: 30%;
 
     * {
         box-sizing: border-box;

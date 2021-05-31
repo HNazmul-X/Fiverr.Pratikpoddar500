@@ -15,8 +15,9 @@ header#header-part {
 }
 
 header#header-part #header-content-part .bee-logo-lg img {
-  -webkit-transform: translate(-14px, 60px);
-          transform: translate(-14px, 60px);
+  -webkit-transform: translate(-14px, 50px);
+          transform: translate(-14px, 50px);
+  width: 200px;
 }
 
 @media screen and (max-width: 800px) {
@@ -29,9 +30,9 @@ header#header-part #header-content-part .bee-logo-lg img {
 header#header-part .cloud-wrapper {
   position: relative;
   z-index: 1;
-  height: 300px;
-  -webkit-transform: translate(-118px, -29px);
-          transform: translate(-118px, -29px);
+  height: 200px;
+  -webkit-transform: translate(-41px, -47px);
+          transform: translate(-41px, -47px);
 }
 
 @media screen and (max-width: 800px) {
@@ -43,21 +44,20 @@ header#header-part .cloud-wrapper {
 
 header#header-part .cloud-wrapper .cloud-img {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 90%;
   top: 0px;
   left: 0px;
+  z-index: -1;
 }
 
 header#header-part .cloud-wrapper .cloud-text {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  z-index: 1;
+  width: 250px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-47%, 11%);
+          transform: translate(-47%, 11%);
 }
 
 .shape-cutter {
@@ -66,20 +66,6 @@ header#header-part .cloud-wrapper .cloud-text {
 
 .shape-cutter img {
   width: 100%;
-}
-
-.svg-cutter {
-  -webkit-mask: url("../images/wave.svg");
-          mask: url("../images/wave.svg");
-  -webkit-mask-position: top;
-          mask-position: top;
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  height: 200px;
-  width: 100%;
-  background: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #66964c 105.66%);
-  -webkit-filter: drop-shadow(2px 3px 10px black);
-          filter: drop-shadow(2px 3px 10px black);
 }
 
 /* navbar stylesheet */
@@ -291,6 +277,8 @@ header#header-part .cloud-wrapper .cloud-text {
 /* quize card section here */
 section#quizes-card {
   background: #d2f8d2;
+  --come-up-is-show: block;
+  --come-up-is-show-renderd: none;
 }
 
 section#quizes-card .all-quizes-card-area .quize-card {
@@ -347,6 +335,24 @@ section#quizes-card .all-quizes-card-area .quize-card .quize-card-hidden {
     opacity: 1;
     pointer-events: all;
     left: 0px;
+  }
+}
+
+section#quizes-card .all-quizes-card-area .quize-card .quize-card-hidden .come-up-text {
+  display: var(--come-up-is-show);
+}
+
+section#quizes-card .all-quizes-card-area .for-mbl-view-text-SWSHTSHT {
+  display: var(--come-up-is-show-renderd);
+}
+
+@media screen and (max-width: 767px) {
+  section#quizes-card {
+    --come-up-is-show: none;
+    --come-up-is-show-renderd: block;
+  }
+  section#quizes-card .quize-card-area {
+    margin-bottom: 40px;
   }
 }
 
@@ -487,28 +493,100 @@ section#quizes-card .all-quizes-card-area .quize-card .quize-card-hidden {
 
 #header-part-page-2 section#header-content .bee-and-cloud {
   margin-bottom: 5rem;
+  padding: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+#header-part-page-2 section#header-content .bee-and-cloud [class*="col-"] {
+  padding: 0px !important;
+}
+
 #header-part-page-2 section#header-content .bee-and-cloud div.bee {
   text-align: center;
+  -webkit-transform: translate(0px, 35px);
+          transform: translate(0px, 35px);
 }
 
 #header-part-page-2 section#header-content .bee-and-cloud div.bee img {
-  width: 240px;
+  width: 200px;
+  height: 100%;
 }
 
 #header-part-page-2 section#header-content .bee-and-cloud div.cloud {
   position: relative;
   height: 200px;
+  z-index: 1;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-transform: translate(-61px, -36px);
+          transform: translate(-61px, -36px);
 }
 
 #header-part-page-2 section#header-content .bee-and-cloud div.cloud img {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: -1;
+}
+
+#header-part-page-2 section#header-content .bee-and-cloud div.cloud .cloud-content {
+  width: 300px;
+  text-align: center;
+  height: 50px;
+}
+
+@media screen and (max-width: 1040px) {
+  #header-part-page-2 section#header-content .bee-and-cloud div.bee {
+    -webkit-transform: translate(10px, 10px);
+            transform: translate(10px, 10px);
+  }
+  #header-part-page-2 section#header-content .bee-and-cloud div.cloud {
+    -webkit-transform: translate(10px);
+            transform: translate(10px);
+  }
+  #header-part-page-2 section#header-content .bee-and-cloud div.cloud .cloud-content {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+  #header-part-page-2 section#header-content .bee-and-cloud div.cloud .cloud-content h5 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  #header-part-page-2 section#header-content .bee-and-cloud div.bee img {
+    width: 150px;
+  }
+  #header-part-page-2 section#header-content .bee-and-cloud div.cloud .cloud-content {
+    width: 180px;
+  }
+  #header-part-page-2 section#header-content .bee-and-cloud div.cloud .cloud-content h5 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #header-part-page-2 section#header-content .bee-and-cloud {
+    padding: 10px;
+  }
+  #header-part-page-2 section#header-content .bee-and-cloud div.cloud .cloud-content {
+    width: 150px;
+    -webkit-transform: translateX(19px);
+            transform: translateX(19px);
+  }
+  #header-part-page-2 section#header-content .bee-and-cloud div.cloud .cloud-content h5 {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #header-part-page-2 section#header-content .bee-and-cloud {
+    margin-bottom: 20px;
+  }
 }
 
 #header-part-page-2 .shape-divide {
@@ -603,6 +681,8 @@ main#page_2 #carousel-1_2 [id*="catagory_"] .mySwiper_page_2_ctg_1 .swiper-slide
   position: relative;
   color: #d8ebd5;
   z-index: 1;
+  background: url(../images/circle-shape-many.svg) repeat;
+  background-size: 30%;
 }
 
 #HNazmul_RIGHT_CORNER_CUT_footer * {

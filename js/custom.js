@@ -17,3 +17,11 @@ const togglerContent = document.querySelector("#hnazmul-toogle-content-area .hna
 togglerIcon.addEventListener("click", () => {
     togglerContent.classList.toggle("left");
 });
+
+
+/* quize card mbl responsive text shower */
+const mblviewedText = document.querySelectorAll("#quizes-card .for-mbl-view-text-SWSHTSHT"); 
+const mblviewedTextComeUp = document.querySelectorAll("#quizes-card .come-up-text"); 
+mblviewedText.forEach((eachNode, index) => {
+    eachNode.innerHTML = mblviewedTextComeUp[index].innerHTML
+})

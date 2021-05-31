@@ -29,21 +29,85 @@ $primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #669
 
         .bee-and-cloud{
             margin-bottom: 5rem;;
+            padding:50px;
             align-items: center;
+            [class*="col-"]{
+                padding:0px !important;
+            }
             div.bee{
                 text-align: center;
+                transform: translate(0px, 35px);
                 img{
-                    width:240px;
+                    width:200px;
+                    height:100%;
                 }
             }
             div.cloud{
                 position: relative;
                 height:200px;
+                z-index: 1;
+                height:100%;
+                display: grid;
+                place-items: center;
+                transform: translate(-61px, -36px);
+
                 img{
                     position: absolute;
                     width:100%;
                     height:100%;
+                    z-index: -1;
                 }
+                .cloud-content{
+                    width:300px;
+                    text-align: center;
+                    height:50px;
+                }
+            }
+            @media screen and (max-width:1040px) {
+                div.bee{
+                    transform: translate(10px , 10px);
+                }
+                div.cloud{
+                    transform: translate(10px);
+                    .cloud-content{
+                        transform: translateX(40px);
+                        h5{
+                            font-size:15px;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width:899px) {
+                div.bee{
+                    img{
+                        width:150px
+                    }
+                }
+                div.cloud{
+                    .cloud-content{
+                        width:180px;
+                        h5{
+                            font-size:14px;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width:767px) {
+                padding:10px;
+
+                div.cloud{
+                    .cloud-content{
+                        width:150px;
+                        transform: translateX(19px);
+                        h5{
+                            font-size:10px;
+                        }
+
+                    }
+                }
+            }
+            @media screen and (max-width:767px) {
+                margin-bottom: 20px;                
             }
         }
     }
