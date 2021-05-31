@@ -27,87 +27,86 @@ $primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #669
             background: $primary-color-verylight;
         }
 
-        .bee-and-cloud{
-            margin-bottom: 5rem;;
-            padding:50px;
+        .bee-and-cloud {
+            margin-bottom: 5rem;
+            padding: 50px;
             align-items: center;
-            [class*="col-"]{
-                padding:0px !important;
+            [class*="col-"] {
+                padding: 0px !important;
             }
-            div.bee{
+            div.bee {
                 text-align: center;
                 transform: translate(0px, 35px);
-                img{
-                    width:200px;
-                    height:100%;
+                img {
+                    width: 200px;
+                    height: 100%;
                 }
             }
-            div.cloud{
+            div.cloud {
                 position: relative;
-                height:200px;
+                height: 200px;
                 z-index: 1;
-                height:100%;
+                height: 100%;
                 display: grid;
                 place-items: center;
                 transform: translate(-61px, -36px);
 
-                img{
+                img {
                     position: absolute;
-                    width:100%;
-                    height:100%;
+                    width: 100%;
+                    height: 100%;
                     z-index: -1;
                 }
-                .cloud-content{
-                    width:300px;
+                .cloud-content {
+                    width: 300px;
                     text-align: center;
-                    height:50px;
+                    height: 50px;
                 }
             }
-            @media screen and (max-width:1040px) {
-                div.bee{
-                    transform: translate(10px , 10px);
+            @media screen and (max-width: 1040px) {
+                div.bee {
+                    transform: translate(10px, 10px);
                 }
-                div.cloud{
+                div.cloud {
                     transform: translate(10px);
-                    .cloud-content{
+                    .cloud-content {
                         transform: translateX(40px);
-                        h5{
-                            font-size:15px;
+                        h5 {
+                            font-size: 15px;
                         }
                     }
                 }
             }
-            @media screen and (max-width:899px) {
-                div.bee{
-                    img{
-                        width:150px
+            @media screen and (max-width: 899px) {
+                div.bee {
+                    img {
+                        width: 150px;
                     }
                 }
-                div.cloud{
-                    .cloud-content{
-                        width:180px;
-                        h5{
-                            font-size:14px;
+                div.cloud {
+                    .cloud-content {
+                        width: 180px;
+                        h5 {
+                            font-size: 14px;
                         }
                     }
                 }
             }
-            @media screen and (max-width:767px) {
-                padding:10px;
+            @media screen and (max-width: 767px) {
+                padding: 10px;
 
-                div.cloud{
-                    .cloud-content{
-                        width:150px;
+                div.cloud {
+                    .cloud-content {
+                        width: 150px;
                         transform: translateX(19px);
-                        h5{
-                            font-size:10px;
+                        h5 {
+                            font-size: 10px;
                         }
-
                     }
                 }
             }
-            @media screen and (max-width:767px) {
-                margin-bottom: 20px;                
+            @media screen and (max-width: 767px) {
+                margin-bottom: 20px;
             }
         }
     }
@@ -120,15 +119,89 @@ $primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #669
     }
 }
 
-
-
 main#page_2 {
     #carousel-1_2 {
         background: url(../images/page-2-circel-background.svg) no-repeat top left;
         background-size: cover;
 
         [id*="catagory_"] {
-            padding:2rem 0px;
+            padding: 2rem 0px;
+            position: relative;
+
+            .toogle___QUIZE_SITEBAR {
+                position: absolute;
+                right: 70px;
+                top: 60px;
+
+                .toogle-icon {
+                    font-size: 20px;
+                    padding: 10px 15px;
+                    background: $primary-color;
+                    color: $primary-color-verylight;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    box-shadow: 1px 2px 4px rgba(255, 255, 255, 0.25);
+                    
+                    &:active{
+                        background:darken($color: $primary-color-verylight, $amount: 30)
+                    }
+                }
+                .toogle-content {
+                    position: fixed;
+                    z-index: 100;
+                    top: 0px;
+                    right: -110%;
+                    height: 100%;
+                    width: 100%;
+                    transition: 0.5s;
+                    overflow: hidden;
+                    overflow-y: auto;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    &.view {
+                        right: 0px;
+                    }
+
+                    .content-wrapper {
+                        position: relative;
+                        z-index: 21;
+                        .toggle-content-canceler {
+                            width: 100%;
+                            z-index: -1;
+                            background: #0b681479;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                        }
+                        .content {
+                            width: 300px;
+                            margin-left: auto;
+                            padding: 10px;
+                            height: auto;
+                            background: darken($color: $primary-color-light, $amount: 30);
+                        }
+                    }
+                    ul {
+                        list-style: none;
+                        padding: 0px;
+                        li {
+                            font-size: 18px;
+                            font-weight: 400;
+                            background: darken($color: $primary-color-light, $amount: 25);
+                            color: darken($color: $primary-color-verylight, $amount: 4);
+                            padding: 10px;
+                            margin-bottom: 10px;
+                            padding-left: 30px;
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                background: darken($color: $primary-color-light, $amount: 30);
+                            }
+                        }
+                    }
+                }
+            }
             .mySwiper_page_2_ctg_1 {
                 .swiper-slide.quize-card-page-2 {
                     height: 238px;
@@ -139,29 +212,27 @@ main#page_2 {
                     box-shadow: 0px 1px 2px 2px #cbcbcb;
                     border-radius: 11px;
                     overflow: hidden;
-                    
-                    .wrapper_p2SchCH{
+
+                    .wrapper_p2SchCH {
                         position: relative;
-                        width:100%;
-                        height:180px;
+                        width: 100%;
+                        height: 180px;
                         z-index: 1;
-                        button.theme-btn-reverse{
+                        button.theme-btn-reverse {
                             position: absolute;
-                            top:56%;
-                            left:50%;
+                            top: 56%;
+                            left: 50%;
                             transform: translate(-50%, -50%);
                         }
-                        img.quize-img_DISH{
+                        img.quize-img_DISH {
                             position: absolute;
                             z-index: -1;
-                            width:100%;
-                            height:100%;
+                            width: 100%;
+                            height: 100%;
                             object-fit: cover;
-
                         }
                     }
                 }
-
             }
         }
     }

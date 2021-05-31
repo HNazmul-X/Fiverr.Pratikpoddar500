@@ -4,6 +4,19 @@ html {
   overflow-x: hidden;
 }
 
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #cbe2cb;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #79b479;
+  border-radius: 50px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -603,6 +616,90 @@ main#page_2 #carousel-1_2 {
 
 main#page_2 #carousel-1_2 [id*="catagory_"] {
   padding: 2rem 0px;
+  position: relative;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR {
+  position: absolute;
+  right: 70px;
+  top: 60px;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-icon {
+  font-size: 20px;
+  padding: 10px 15px;
+  background: #0b6814;
+  color: #d8ebd5;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 2px 4px rgba(255, 255, 255, 0.25);
+          box-shadow: 1px 2px 4px rgba(255, 255, 255, 0.25);
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-icon:active {
+  background: #78ba6d;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  right: -110%;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content::-webkit-scrollbar {
+  display: none;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content.view {
+  right: 0px;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content .content-wrapper {
+  position: relative;
+  z-index: 21;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content .content-wrapper .toggle-content-canceler {
+  width: 100%;
+  z-index: -1;
+  background: #0b681479;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content .content-wrapper .content {
+  width: 300px;
+  margin-left: auto;
+  padding: 10px;
+  height: auto;
+  background: #213019;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content ul {
+  list-style: none;
+  padding: 0px;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content ul li {
+  font-size: 18px;
+  font-weight: 400;
+  background: #2c4121;
+  color: #cbe4c7;
+  padding: 10px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content ul li:hover, main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content ul li:focus, main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content ul li:active {
+  background: #213019;
 }
 
 main#page_2 #carousel-1_2 [id*="catagory_"] .mySwiper_page_2_ctg_1 .swiper-slide.quize-card-page-2 {
