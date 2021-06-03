@@ -1,0 +1,74 @@
+$primary-color: #0b6814;
+$primary-color-light: #66964c;
+$primary-color-verylight: #d8ebd5;
+$primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #66964c 105.66%);
+
+#result-page {
+    .hnazmul-navbar {
+        background: green;
+    }
+
+    .result-box {
+        background: $primary-color-verylight;
+        box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.18), 0px 5.5px 5px rgba(0, 0, 0, 0.24);
+        border-radius: 55px;
+        width: 70%;
+        padding: 30px;
+        margin: auto;
+        margin-top: 70px;
+        .mark-list {
+            color:$primary-color-light;
+            li {
+                display: flex;
+                align-items: center;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 30px;
+                line-height: 20px;
+                margin-bottom: 30px;
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 40px;
+                    width: 40px;
+                    background: url(../images/check-mark-for-list-begin.svg) no-repeat;
+                    background-size: 100%;
+                    margin-right:10px;
+                }
+            }
+        }
+        .bee-flip-right-resultBox{
+            width:80%;
+            text-align: center;
+            img{
+                transform: matrix(-1, 0, 0, 1, 0, 0);
+                width:90%;
+
+            }
+        }
+        button.analytics{
+            background:$primary-color-light;
+            color:white;
+            border:none;
+            padding:10px 40px;
+            display: block;
+            width: 90%;
+            margin:auto;
+            border-radius: 20px;
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+        }
+        @media screen and (max-width:750px) {
+            width:100%;
+            .mark-list{
+                li{
+                    font-size:20px;
+                }
+            }
+        }
+
+        @media screen and (max-width:750px) {
+            padding:30px 10px 20px 20px;
+        }
+    }
+}

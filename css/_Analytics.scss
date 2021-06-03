@@ -1,0 +1,19 @@
+$primary-color: #0b6814;
+$primary-color-light: #66964c;
+$primary-color-verylight: #d8ebd5;
+$primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #66964c 105.66%);
+
+#analytics-details {
+    margin-top: 50px;
+    .tables-wrapper-upwrapper {
+        .tables-wrapper {
+            background: $primary-color-verylight;
+            padding:20px;
+            border-radius: 20px;
+            table {
+                background: white;
+                box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.18), 0px 5.5px 5px rgba(0, 0, 0, 0.24);
+            }
+        }
+    }
+}
