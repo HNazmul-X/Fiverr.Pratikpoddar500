@@ -113,6 +113,7 @@ header#header-part .cloud-wrapper .cloud-text {
 
 .hnazmul-navbar .hnazmul-navbar-container .hnazmul-nav-toggle-btn {
   display: none;
+  z-index: 100;
 }
 
 .hnazmul-navbar .hnazmul-navbar-container .hnazmul-nav-toggle-btn button {
@@ -505,11 +506,14 @@ section#quizes-card .all-quizes-card-area .for-mbl-view-text-SWSHTSHT {
 }
 
 #header-part-page-2 section#header-content .bee-and-cloud {
-  margin-bottom: 5rem;
-  padding: 50px;
+  margin-bottom: 0.2rem;
+  padding: 30px;
+  padding-bottom: 5px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: translate(0px, -30px);
+          transform: translate(0px, -30px);
 }
 
 #header-part-page-2 section#header-content .bee-and-cloud [class*="col-"] {
@@ -518,12 +522,12 @@ section#quizes-card .all-quizes-card-area .for-mbl-view-text-SWSHTSHT {
 
 #header-part-page-2 section#header-content .bee-and-cloud div.bee {
   text-align: center;
-  -webkit-transform: translate(0px, 35px);
-          transform: translate(0px, 35px);
+  -webkit-transform: translate(0px, 4px);
+          transform: translate(0px, 4px);
 }
 
 #header-part-page-2 section#header-content .bee-and-cloud div.bee img {
-  width: 200px;
+  width: 170px;
   height: 100%;
 }
 
@@ -535,8 +539,8 @@ section#quizes-card .all-quizes-card-area .for-mbl-view-text-SWSHTSHT {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  -webkit-transform: translate(-61px, -36px);
-          transform: translate(-61px, -36px);
+  -webkit-transform: translate(-61px, -34px);
+          transform: translate(-61px, -34px);
 }
 
 #header-part-page-2 section#header-content .bee-and-cloud div.cloud img {
@@ -571,6 +575,10 @@ section#quizes-card .all-quizes-card-area .for-mbl-view-text-SWSHTSHT {
 }
 
 @media screen and (max-width: 899px) {
+  #header-part-page-2 section#header-content .bee-and-cloud .bee-and-cloud {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
   #header-part-page-2 section#header-content .bee-and-cloud div.bee img {
     width: 150px;
   }
@@ -584,6 +592,8 @@ section#quizes-card .all-quizes-card-area .for-mbl-view-text-SWSHTSHT {
 
 @media screen and (max-width: 767px) {
   #header-part-page-2 section#header-content .bee-and-cloud {
+    -webkit-transform: translate(0);
+            transform: translate(0);
     padding: 10px;
   }
   #header-part-page-2 section#header-content .bee-and-cloud div.cloud .cloud-content {
@@ -592,7 +602,7 @@ section#quizes-card .all-quizes-card-area .for-mbl-view-text-SWSHTSHT {
             transform: translateX(19px);
   }
   #header-part-page-2 section#header-content .bee-and-cloud div.cloud .cloud-content h5 {
-    font-size: 10px;
+    font-size: 13px;
   }
 }
 
@@ -607,6 +617,13 @@ section#quizes-card .all-quizes-card-area .for-mbl-view-text-SWSHTSHT {
   bottom: -1px;
   width: 100%;
   left: 0px;
+  height: 54px;
+}
+
+@media screen and (max-width: 767px) {
+  #header-part-page-2 .shape-divide {
+    height: auto;
+  }
 }
 
 main#page_2 #carousel-1_2 {
@@ -615,8 +632,11 @@ main#page_2 #carousel-1_2 {
 }
 
 main#page_2 #carousel-1_2 [id*="catagory_"] {
-  padding: 2rem 0px;
   position: relative;
+}
+
+main#page_2 #carousel-1_2 [id*="catagory_"]#catagory_1 {
+  margin-top: -30px;
 }
 
 main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR {
@@ -675,6 +695,15 @@ main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-cont
   left: 0px;
 }
 
+main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content .content-wrapper .toggle-content-canceler img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 40%;
+  top: 10%;
+  opacity: 0.5;
+}
+
 main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content .content-wrapper .content {
   width: 300px;
   margin-left: auto;
@@ -700,6 +729,13 @@ main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-cont
 
 main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content ul li:hover, main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content ul li:focus, main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR .toogle-content ul li:active {
   background: #213019;
+}
+
+@media screen and (max-width: 767px) {
+  main#page_2 #carousel-1_2 [id*="catagory_"] .toogle___QUIZE_SITEBAR {
+    right: 9px;
+    top: 40px;
+  }
 }
 
 main#page_2 #carousel-1_2 [id*="catagory_"] .mySwiper_page_2_ctg_1 .swiper-slide.quize-card-page-2 {

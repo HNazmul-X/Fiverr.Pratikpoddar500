@@ -28,17 +28,19 @@ $primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #669
         }
 
         .bee-and-cloud {
-            margin-bottom: 5rem;
-            padding: 50px;
+            margin-bottom: 0.2rem;
+            padding: 30px;
+            padding-bottom: 5px;
             align-items: center;
+            transform: translate(0px, -30px);
             [class*="col-"] {
                 padding: 0px !important;
             }
             div.bee {
                 text-align: center;
-                transform: translate(0px, 35px);
+                transform: translate(0px, 4px);
                 img {
-                    width: 200px;
+                    width: 170px;
                     height: 100%;
                 }
             }
@@ -49,7 +51,7 @@ $primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #669
                 height: 100%;
                 display: grid;
                 place-items: center;
-                transform: translate(-61px, -36px);
+                transform: translate(-61px, -34px);
 
                 img {
                     position: absolute;
@@ -78,6 +80,9 @@ $primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #669
                 }
             }
             @media screen and (max-width: 899px) {
+                .bee-and-cloud {
+                    transform: translate(0);
+                }
                 div.bee {
                     img {
                         width: 150px;
@@ -93,6 +98,8 @@ $primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #669
                 }
             }
             @media screen and (max-width: 767px) {
+                transform: translate(0);
+
                 padding: 10px;
 
                 div.cloud {
@@ -100,7 +107,7 @@ $primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #669
                         width: 150px;
                         transform: translateX(19px);
                         h5 {
-                            font-size: 10px;
+                            font-size: 13px;
                         }
                     }
                 }
@@ -116,6 +123,10 @@ $primary-gradient: linear-gradient(81.97deg, #0b6814 2.15%, #57b845 59.43%, #669
         bottom: -1px;
         width: 100%;
         left: 0px;
+        height: 54px;
+        @media screen and (max-width: 767px) {
+            height: auto;
+        }
     }
 }
 
@@ -125,9 +136,11 @@ main#page_2 {
         background-size: cover;
 
         [id*="catagory_"] {
-            padding: 2rem 0px;
             position: relative;
 
+            &#catagory_1 {
+                margin-top: -30px;
+            }
             .toogle___QUIZE_SITEBAR {
                 position: absolute;
                 right: 70px;
@@ -141,9 +154,9 @@ main#page_2 {
                     border-radius: 50%;
                     cursor: pointer;
                     box-shadow: 1px 2px 4px rgba(255, 255, 255, 0.25);
-                    
-                    &:active{
-                        background:darken($color: $primary-color-verylight, $amount: 30)
+
+                    &:active {
+                        background: darken($color: $primary-color-verylight, $amount: 30);
                     }
                 }
                 .toogle-content {
@@ -173,6 +186,14 @@ main#page_2 {
                             position: absolute;
                             top: 0px;
                             left: 0px;
+                            img{
+                                width:200px;
+                                height:200px;
+                                position: absolute;
+                                right:40%;
+                                top:10%;
+                                opacity: 0.5;
+                            }
                         }
                         .content {
                             width: 300px;
@@ -200,6 +221,10 @@ main#page_2 {
                             }
                         }
                     }
+                }
+                @media screen and (max-width: 767px) {
+                    right: 9px;
+                    top: 40px;
                 }
             }
             .mySwiper_page_2_ctg_1 {
