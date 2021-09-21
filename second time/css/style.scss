@@ -413,6 +413,7 @@ section#super-kids {
             overflow: hidden;
             background: white;
             transition: 0.5s;
+            
             &::before {
                 position: absolute;
                 content: "";
@@ -435,6 +436,8 @@ section#super-kids {
                 box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
                 border-radius: 18px 18px 0px 0px;
                 padding: 10px;
+               border: 1px solid rgba(211, 211, 211, 0.432);
+                border-bottom:none;
 
                 .icon-and-text {
                     .icon {
@@ -461,7 +464,7 @@ section#super-kids {
                 }
             }
             .down {
-                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+               border: 1px solid rgba(211, 211, 211, 0.432);
                 border-radius: 0px 0px 11px 11px;
                 padding: 10px 7px;
                 .iconify {
