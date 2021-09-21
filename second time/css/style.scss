@@ -10,12 +10,12 @@ html {
 }
 
 :root {
+    --green-very-dark: #183820;
     --green-dark: #006922;
     --gren-semi-dark: #2a9f43;
     --green-normal: #2a9f43;
     --green-semi-light: #55d073;
     --green-q-light: #8dd691;
-    --green-very-light: #162e1c;
     --green-overlay: #dffee8;
 }
 
@@ -344,12 +344,12 @@ section#subs-newslatter {
         border-radius: 50%;
         position: absolute;
         z-index: -1;
-        background: radial-gradient(77.31% 77.31% at 55.71% 22.69%, #d5facf 0%, #67d169 34.55%, #c6f8c7 70.82%, #aaf9ac 100%);
+        background: radial-gradient(77.31% 77.31% at 55.71% 22.69%, #9eda9f 0%, #b0e1b1 19%, #81d783 34.55%, #a5dea6 51.14%, #d4f1d4 69.43%, #a0e7a2 85.45%, #8bef8d 100%);
         top: 0px;
         left: 0px;
-        animation: up-down 4s infinite alternate linear;
+        animation: up-down 15s infinite linear;
         @media screen and(max-width:800px) {
-            width:100px;
+            width: 100px;
             height: 100px;
         }
     }
@@ -363,20 +363,129 @@ section#subs-newslatter {
     }
 }
 
-
 @keyframes up-down {
-    to{
+    0% {
         transform: translate(0%, 0%) rotate(0);
     }
-    from{
-        transform: translate(-20%, -20%) rotate(360deg);
+    50% {
+        transform: translate(-20%, -20%) rotate(180deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(360deg);
     }
 }
 @keyframes up-down-revarse {
-    to{
+    0% {
         transform: translate(-20%, -20%) rotate(360deg);
     }
-    from{
-        transform: translate(0%, 0%) rotate(0);
+    50% {
+        transform: translate(0%, 0%) rotate(180deg);
+    }
+    100% {
+        transform: translate(-20%, -20%) rotate(0deg);
+    }
+}
+
+/* super kid section css */
+/* =========================== */
+section#super-kids {
+    .superkid-banner-box {
+        background: url(../images/super-kid-banner.png);
+        min-height: 250px;
+        padding: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-weight: 800;
+            color: var(--green-dark);
+        }
+    }
+
+    .superkid--quize-card-container {
+        margin-top: -50px;
+        margin-bottom: 50px;
+        cursor: pointer;
+        .superkid--quize-card {
+            position: relative;
+            z-index: 1;
+            border-radius: 11px;
+            overflow: hidden;
+            background: white;
+            transition: 0.5s;
+            &::before {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: var(--green-normal);
+                z-index: -1;
+                clip-path: circle(0.3% at 100% 0);
+                transition: 0.3s;
+            }
+            &:hover {
+                transform: translateY(-20px);
+                &::before {
+                    clip-path: circle(110.8% at 77% 21%);
+                }
+                color:white;
+            }
+            .upper {
+                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+                border-radius: 18px 18px 0px 0px;
+                padding: 10px;
+
+                .icon-and-text {
+                    .icon {
+                        img.superkid-card-icon-image {
+                            max-width: 100px;
+                        }
+                    }
+                    .text {
+                        h6 {
+                            font-weight: 700;
+                        }
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .text-and-btn {
+                    .col-7 > p {
+                        font-size: 14px;
+                    }
+                    .col-5 > button.theme-btn {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .down {
+                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+                border-radius: 0px 0px 11px 11px;
+                padding: 10px 7px;
+                .iconify {
+                    font-size: 50px;
+                    color: var(--green-dark);
+                    margin-right: 10px;
+                    animation: color-changing 2s infinite alternate linear;
+                }
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes color-changing {
+    0% {
+        color: var(--green-very-dark);
+    }
+    50% {
+        color: var(--green-normal);
+    }
+    100% {
+        color: var(--green-q-light);
     }
 }

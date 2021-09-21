@@ -11,12 +11,12 @@ html {
 }
 
 :root {
+  --green-very-dark: #183820;
   --green-dark: #006922;
   --gren-semi-dark: #2a9f43;
   --green-normal: #2a9f43;
   --green-semi-light: #55d073;
   --green-q-light: #8dd691;
-  --green-very-light: #162e1c;
   --green-overlay: #dffee8;
 }
 
@@ -357,11 +357,11 @@ section#subs-newslatter .newslatter-form-box .input-group button.input-group-tex
   border-radius: 50%;
   position: absolute;
   z-index: -1;
-  background: radial-gradient(77.31% 77.31% at 55.71% 22.69%, #d5facf 0%, #67d169 34.55%, #c6f8c7 70.82%, #aaf9ac 100%);
+  background: radial-gradient(77.31% 77.31% at 55.71% 22.69%, #9eda9f 0%, #b0e1b1 19%, #81d783 34.55%, #a5dea6 51.14%, #d4f1d4 69.43%, #a0e7a2 85.45%, #8bef8d 100%);
   top: 0px;
   left: 0px;
-  -webkit-animation: up-down 4s infinite alternate linear;
-          animation: up-down 4s infinite alternate linear;
+  -webkit-animation: up-down 15s infinite linear;
+          animation: up-down 15s infinite linear;
 }
 
 @media screen and (max-width: 800px) {
@@ -381,46 +381,195 @@ section#subs-newslatter .newslatter-form-box .input-group button.input-group-tex
 }
 
 @-webkit-keyframes up-down {
-  to {
+  0% {
     -webkit-transform: translate(0%, 0%) rotate(0);
             transform: translate(0%, 0%) rotate(0);
   }
-  from {
-    -webkit-transform: translate(-20%, -20%) rotate(360deg);
-            transform: translate(-20%, -20%) rotate(360deg);
+  50% {
+    -webkit-transform: translate(-20%, -20%) rotate(180deg);
+            transform: translate(-20%, -20%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%) rotate(360deg);
+            transform: translate(0%, 0%) rotate(360deg);
   }
 }
 
 @keyframes up-down {
-  to {
+  0% {
     -webkit-transform: translate(0%, 0%) rotate(0);
             transform: translate(0%, 0%) rotate(0);
   }
-  from {
-    -webkit-transform: translate(-20%, -20%) rotate(360deg);
-            transform: translate(-20%, -20%) rotate(360deg);
+  50% {
+    -webkit-transform: translate(-20%, -20%) rotate(180deg);
+            transform: translate(-20%, -20%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%) rotate(360deg);
+            transform: translate(0%, 0%) rotate(360deg);
   }
 }
 
 @-webkit-keyframes up-down-revarse {
-  to {
+  0% {
     -webkit-transform: translate(-20%, -20%) rotate(360deg);
             transform: translate(-20%, -20%) rotate(360deg);
   }
-  from {
-    -webkit-transform: translate(0%, 0%) rotate(0);
-            transform: translate(0%, 0%) rotate(0);
+  50% {
+    -webkit-transform: translate(0%, 0%) rotate(180deg);
+            transform: translate(0%, 0%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translate(-20%, -20%) rotate(0deg);
+            transform: translate(-20%, -20%) rotate(0deg);
   }
 }
 
 @keyframes up-down-revarse {
-  to {
+  0% {
     -webkit-transform: translate(-20%, -20%) rotate(360deg);
             transform: translate(-20%, -20%) rotate(360deg);
   }
-  from {
-    -webkit-transform: translate(0%, 0%) rotate(0);
-            transform: translate(0%, 0%) rotate(0);
+  50% {
+    -webkit-transform: translate(0%, 0%) rotate(180deg);
+            transform: translate(0%, 0%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translate(-20%, -20%) rotate(0deg);
+            transform: translate(-20%, -20%) rotate(0deg);
+  }
+}
+
+/* super kid section css */
+/* =========================== */
+section#super-kids .superkid-banner-box {
+  background: url(../images/super-kid-banner.png);
+  min-height: 250px;
+  padding: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#super-kids .superkid-banner-box h1 {
+  font-weight: 800;
+  color: var(--green-dark);
+}
+
+section#super-kids .superkid--quize-card-container {
+  margin-top: -50px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 11px;
+  overflow: hidden;
+  background: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--green-normal);
+  z-index: -1;
+  -webkit-clip-path: circle(0.3% at 100% 0);
+          clip-path: circle(0.3% at 100% 0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card:hover {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  color: white;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card:hover::before {
+  -webkit-clip-path: circle(110.8% at 77% 21%);
+          clip-path: circle(110.8% at 77% 21%);
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card .upper {
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 18px 18px 0px 0px;
+  padding: 10px;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card .upper .icon-and-text .icon img.superkid-card-icon-image {
+  max-width: 100px;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card .upper .icon-and-text .text h6 {
+  font-weight: 700;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card .upper .icon-and-text .text p {
+  font-size: 14px;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card .upper .text-and-btn .col-7 > p {
+  font-size: 14px;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card .upper .text-and-btn .col-5 > button.theme-btn {
+  font-size: 12px;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card .down {
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 11px 11px;
+  padding: 10px 7px;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card .down .iconify {
+  font-size: 50px;
+  color: var(--green-dark);
+  margin-right: 10px;
+  -webkit-animation: color-changing 2s infinite alternate linear;
+          animation: color-changing 2s infinite alternate linear;
+}
+
+section#super-kids .superkid--quize-card-container .superkid--quize-card .down p {
+  font-size: 13px;
+}
+
+@-webkit-keyframes color-changing {
+  0% {
+    color: var(--green-very-dark);
+  }
+  50% {
+    color: var(--green-normal);
+  }
+  100% {
+    color: var(--green-q-light);
+  }
+}
+
+@keyframes color-changing {
+  0% {
+    color: var(--green-very-dark);
+  }
+  50% {
+    color: var(--green-normal);
+  }
+  100% {
+    color: var(--green-q-light);
   }
 }
 /*# sourceMappingURL=style.css.map */
