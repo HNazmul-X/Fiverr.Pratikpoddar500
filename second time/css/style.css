@@ -10,6 +10,10 @@ html {
   overflow-x: hidden;
 }
 
+html body {
+  overflow: hidden;
+}
+
 :root {
   --green-very-dark: #183820;
   --green-dark: #006922;
@@ -572,5 +576,160 @@ section#super-kids .superkid--quize-card-container .superkid--quize-card .down p
   100% {
     color: var(--green-q-light);
   }
+}
+
+/* discover learing video carousel */
+section#discover-video .discover-learning-video-slider #discover-slider {
+  margin-bottom: 40px;
+}
+
+section#discover-video .discover-learning-video-slider #discover-slider .swiper-wrapper {
+  cursor: default !important;
+}
+
+section#discover-video .discover-learning-video-slider #discover-slider .swiper-wrapper .swiper-slide {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+section#discover-video .discover-learning-video-slider #discover-slider .swiper-wrapper .swiper-slide.swiper-slide-active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.discover-card {
+  height: 300px;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.discover-card .image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.discover-card .play-icon {
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+}
+
+.discover-card .play-icon:hover img {
+  width: 100px;
+}
+
+.discover-card .play-icon img {
+  width: 50px;
+}
+
+/* our catagory css */
+section#our-catagories ul.catagory-tabs-list {
+  border-bottom: 3px solid var(--green-dark);
+}
+
+section#our-catagories ul.catagory-tabs-list li.nav-item button.nav-link {
+  background: var(--green-normal);
+  color: white;
+  margin: 0 10px;
+  padding: 10px 25px;
+}
+
+section#our-catagories ul.catagory-tabs-list li.nav-item button.nav-link.active {
+  background-color: var(--green-dark);
+}
+
+@media screen and (max-width: 1224) {
+  section#our-catagories ul.catagory-tabs-list li.nav-item button.nav-link {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin: 0 2px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section#our-catagories ul.catagory-tabs-list li.nav-item button.nav-link {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 0 2px;
+  }
+}
+
+section#our-catagories .catagories-tab-content .catagory-tab-pane .catagory-card-wrapper {
+  padding: 20px;
+}
+
+section#our-catagories .catagories-tab-content .catagory-tab-pane .catagory-card-wrapper .catagory-card > .card-body .card-text {
+  font-size: 23px;
+}
+
+section#our-catagories .catagories-tab-content .catagory-tab-pane .catagory-card-wrapper .catagory-card > .card-body .feature-list > .d-flex {
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#our-catagories .catagories-tab-content .catagory-tab-pane .catagory-card-wrapper .catagory-card > .card-body .feature-list > .d-flex .iconify {
+  font-size: 30px;
+  margin-right: 10px;
+  color: white;
+  background: var(--green-semi-light);
+  padding: 5px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border-radius: 50%;
+}
+
+section#our-catagories .catagories-tab-content .catagory-tab-pane .catagory-card-wrapper .catagory-card .card-footer div.btn.btn-success {
+  background: var(--gren-semi-dark);
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  section#our-catagories .catagories-tab-content .catagory-tab-pane .catagory-card-wrapper {
+    padding: 5px;
+  }
+  section#our-catagories .catagories-tab-content .catagory-tab-pane .catagory-card-wrapper .catagory-card > .card-body .card-text {
+    font-size: 15px;
+  }
+  section#our-catagories .catagories-tab-content .catagory-tab-pane .catagory-card-wrapper .catagory-card > .card-body .feature-list {
+    padding: 0px !important;
+  }
+  section#our-catagories .catagories-tab-content .catagory-tab-pane .catagory-card-wrapper .catagory-card > .card-body .feature-list > .d-flex .iconify {
+    font-size: 15px;
+    padding: 2px;
+  }
+  section#our-catagories .catagories-tab-content .catagory-tab-pane .catagory-card-wrapper .catagory-card > .card-body .feature-list > .d-flex p {
+    font-size: 14px;
+  }
+}
+
+/* why learn edu.. feature card */
+section#why-learnedu .feature-card-wrapper .feature-card img {
+  background: var(--green-q-light);
+  padding: 15px 10px;
+  max-width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+section#why-learnedu .feature-card-wrapper .feature-card h3 {
+  font-weight: 400;
+  color: var(--green-dark);
 }
 /*# sourceMappingURL=style.css.map */

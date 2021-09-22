@@ -7,6 +7,9 @@
 }
 html {
     overflow-x: hidden;
+    body {
+        overflow: hidden;
+    }
 }
 
 :root {
@@ -413,7 +416,7 @@ section#super-kids {
             overflow: hidden;
             background: white;
             transition: 0.5s;
-            
+
             &::before {
                 position: absolute;
                 content: "";
@@ -430,14 +433,14 @@ section#super-kids {
                 &::before {
                     clip-path: circle(110.8% at 77% 21%);
                 }
-                color:white;
+                color: white;
             }
             .upper {
                 box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
                 border-radius: 18px 18px 0px 0px;
                 padding: 10px;
-               border: 1px solid rgba(211, 211, 211, 0.432);
-                border-bottom:none;
+                border: 1px solid rgba(211, 211, 211, 0.432);
+                border-bottom: none;
 
                 .icon-and-text {
                     .icon {
@@ -464,7 +467,7 @@ section#super-kids {
                 }
             }
             .down {
-               border: 1px solid rgba(211, 211, 211, 0.432);
+                border: 1px solid rgba(211, 211, 211, 0.432);
                 border-radius: 0px 0px 11px 11px;
                 padding: 10px 7px;
                 .iconify {
@@ -492,3 +495,178 @@ section#super-kids {
         color: var(--green-q-light);
     }
 }
+
+/* discover learing video carousel */
+
+section#discover-video {
+    .discover-learning-video-slider {
+        #discover-slider {
+            margin-bottom: 40px;
+            .swiper-wrapper {
+                cursor: default !important;
+                .swiper-slide {
+                    transform: scale(0.8);
+                    transition: 0.5s;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    &.swiper-slide-active {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.discover-card {
+    height: 300px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    .image img {
+        width: 100%;
+        border-radius: 20px;
+    }
+    .play-icon {
+        position: absolute;
+        cursor: pointer;
+        text-align: center;
+        &:hover {
+            img {
+                width: 100px;
+            }
+        }
+        img {
+            width: 50px;
+        }
+    }
+}
+
+/* our catagory css */
+section#our-catagories {
+    ul.catagory-tabs-list {
+        border-bottom: 3px solid var(--green-dark);
+        li.nav-item {
+            button.nav-link {
+                background: var(--green-normal);
+                color: white;
+                margin: 0 10px;
+                padding: 10px 25px;
+                &.active {
+                    background-color: var(--green-dark);
+                }
+            }
+        }
+
+        @media screen and (max-width:1224) {
+            li.nav-item{
+                button.nav-link{
+                    padding:5px 10px;
+                    font-size:16px;
+                    margin: 0 2px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        @media screen and (max-width:768px) {
+            li.nav-item{
+                button.nav-link{
+                    padding:5px 10px;
+                    font-size:14px;
+                    margin: 0 2px;
+                }
+            }
+        }
+    }
+
+    .catagories-tab-content {
+        .catagory-tab-pane {
+            .catagory-card-wrapper {
+                padding: 20px;
+                .catagory-card {
+                    & > .card-body {
+                        .card-text {
+                            font-size: 23px;
+                        }
+                        .feature-list {
+                            & > .d-flex {
+                                margin-bottom: 10px;
+                                align-items: center;
+                                .iconify {
+                                    font-size: 30px;
+                                    margin-right: 10px;
+                                    color: white;
+                                    background: var(--green-semi-light);
+                                    padding: 5px;
+                                    box-sizing: content-box;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+
+                    .card-footer {
+                        div.btn.btn-success {
+                            background: var(--gren-semi-dark);
+                            border-radius: 0px;
+                        }
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    padding: 5px;
+                    .catagory-card {
+                        & > .card-body {
+                            .card-text {
+                                font-size: 15px;
+                            }
+                            .feature-list{
+                                padding: 0px !important;
+                                &>.d-flex{
+                                    .iconify{
+                                    font-size: 15px;
+                                    padding:2px;
+                                }
+                                p{
+                                    font-size: 14px;
+                                }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* why learn edu.. feature card */
+section#why-learnedu{
+
+    .feature-card-wrapper{
+        .feature-card{
+            img{
+                background:var(--green-q-light);
+                padding: 15px 10px;
+                max-width: 80px;;
+                border-radius: 50%;
+                margin-bottom: 10px;
+            }
+            h3{
+                font-weight: 400;
+                color:var(--green-dark);
+            }
+        }
+    }
+
+
+
+}
+
+
+
+
+
+
