@@ -69,7 +69,7 @@ const glide = new Glide("#our-result-carousel", {
 glide.mount();
 
 /* swiper js carousel for discover carousel */
-var swiper = new Swiper("#discover-slider", {
+new Swiper("#discover-slider", {
     // effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -93,6 +93,7 @@ var swiper = new Swiper("#discover-slider", {
     spaceBetween: 30,
     pagination: {
         el: ".swiper-pagination",
+        clickable: true,
     },
 });
 
@@ -115,3 +116,64 @@ try {
 } catch (e) {
     console.error(e);
 }
+
+/* counter of Review */
+//======================================
+try {
+    const counterContainer = document.querySelector(".counters-container");
+    const counterCards = document.querySelectorAll(".counters-container .counter-card");
+
+    window.onscroll = () => {
+        if (counterContainer.getBoundingClientRect().top <= window.innerHeight / 1.15) {
+            [...counterCards].forEach((card) => {
+                const counterDigit = card.querySelector("span.counter-digit");
+
+                const updateCount = () => {
+                    const countDestination = +counterDigit.getAttribute("data-count");
+                    const count = +counterDigit.innerText;
+                    const speed = +counterDigit.getAttribute("data-count-speed") || 200;
+                    const increement = Math.round(countDestination / speed);
+                    if (count <= countDestination) {
+                        counterDigit.innerText = increement + count;
+                        setTimeout(updateCount, 25);
+                    } else {
+                        counterDigit.innerText = countDestination;
+                    }
+                };
+                updateCount();
+            });
+        } else {
+            counterCards.forEach((card) => (card.querySelector("span.counter-digit").innerText = 0));
+        }
+    };
+
+} catch (e) {}
+
+// testomonials review carousel initialization
+try {
+    new Swiper(".testimonial-review-slider", {
+        loop:true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+            560: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            800: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
+    });
+} catch (e) {}
