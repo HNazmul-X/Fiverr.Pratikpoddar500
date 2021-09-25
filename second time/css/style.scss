@@ -302,38 +302,10 @@ section#subs-newslatter {
     #our-result-carousel-container {
         #our-result-carousel {
             position: relative;
-            .glide__track {
-                .glide__slides {
-                    .glide__slide {
+            .swiper-wrapper{
+                .swiper-slide{
+                    img{
                         border-radius: 20px;
-                        overflow: hidden;
-                    }
-                }
-            }
-            .glide__arrows {
-                .glide__arrow {
-                    top: 50%;
-                    position: absolute;
-                    transform: translateY(-50%);
-                    padding: 2px;
-                    text-align: center;
-                    border-radius: 50%;
-                    color: var(--green-dark);
-                    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.568);
-                    border: none;
-                    &:hover {
-                        background: var(--green-q-light) !important;
-                    }
-                    .iconify {
-                        font-size: 30px;
-                    }
-                    &.glide__arrow--left {
-                        left: 10px;
-                        background: white;
-                    }
-                    &.glide__arrow--right {
-                        right: 10px;
-                        background: white;
                     }
                 }
             }
@@ -342,8 +314,8 @@ section#subs-newslatter {
 
     .shape {
         padding: 50px;
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         position: absolute;
         z-index: -1;
@@ -756,6 +728,34 @@ section#why-learnedu {
             }
         }
     }
+
+    @media screen and (max-width: 420px) {
+        .feature-card-wrapper {
+            margin: 10px auto;
+            .feature-card {
+                img {
+                    padding: 10px 7px;
+                    max-width: 60px;
+                }
+                h3 {
+                    font-size: 18px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+        .counters-container {
+            .col > .counter-card {
+                h3 {
+                    font-size: 18px;
+                }
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 }
 
 // keyframes for this section
@@ -867,7 +867,7 @@ section#review {
             }
         }
 
-        & >.container {
+        & > .container {
             position: relative;
             z-index: 1;
             img.quote {
@@ -876,14 +876,155 @@ section#review {
                 z-index: -1;
                 &._1 {
                     top: -20px;
-                    left:0px;
+                    left: 0px;
                 }
                 &._2 {
                     bottom: -20px;
-                    right:0px;
+                    right: 0px;
                     transform: rotate(180deg);
                 }
             }
+        }
+    }
+
+    @media screen and (max-width: 740px) {
+        #review-slider {
+            & > .container {
+                img.quote {
+                    width: 70px !important;
+                    &._1 {
+                        top: 5px;
+                    }
+                    &._2 {
+                        bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*  ELdu section Css here
+===================================*/
+section#ELdu {
+    min-height: 250px;
+    background: var(--green-semi-light);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    .ELdu-text {
+        .ELdu-text__box {
+            color: white;
+            * {
+                margin-bottom: 0px;
+            }
+            button {
+                border: 0px;
+                padding: 5px 25px;
+                min-width: 150px;
+                border-radius: 20px;
+                color: var(--green-dark);
+                background: white;
+                margin-top: 10px;
+            }
+        }
+    }
+    .ELdu-image__img {
+        position: absolute;
+        max-width: 320px;
+        left: 50%;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    @media screen and (max-width: 650px) {
+        .ELdu-image__img {
+            right: -100px;
+            left: auto;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        padding: 10px;
+        .ELdu-image__img {
+            position: static;
+            order: 0;
+            margin-top: -50px;
+            width: 100%;
+        }
+        & > .container {
+            order: 1;
+            .ELdu-text__box {
+                margin-top: 20px;
+                text-align: center;
+                h1 {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+/* footer CSS
+===================================*/
+
+footer#footer {
+    --bg: #373d46;
+    --color: #646b75;
+    background: var(--bg);
+    color: var(--color);
+    padding: 30px 0;
+    padding-bottom: 10px;
+
+    .logo-and-title {
+        text-align: center;
+        img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            line-height: 12px;
+        }
+        h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        & > .icons {
+            .iconify {
+                font-size: 35px;
+                margin: 0 5px;
+            }
+        }
+    }
+
+    .contact-us__form {
+        text-align: center;
+        input,
+        textarea {
+            background: #444b55 !important;
+            border: none;
+            margin-bottom: 10px;
+            resize: none;
+            color: #868a8f;
+            font-weight: 500;
+            &:focus,
+            &:active {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        button[type="submit"] {
+            border: none;
+            background: var(--color);
+            color: var(--bg);
+            padding: 5px 15px;
+            font-weight: bold;
+            border-radius: 50px;
         }
     }
 }

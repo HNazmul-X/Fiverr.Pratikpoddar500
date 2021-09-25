@@ -317,47 +317,14 @@ section#subs-newslatter .newslatter-form-box .input-group button.input-group-tex
   position: relative;
 }
 
-#our-result #our-result-carousel-container #our-result-carousel .glide__track .glide__slides .glide__slide {
+#our-result #our-result-carousel-container #our-result-carousel .swiper-wrapper .swiper-slide img {
   border-radius: 20px;
-  overflow: hidden;
-}
-
-#our-result #our-result-carousel-container #our-result-carousel .glide__arrows .glide__arrow {
-  top: 50%;
-  position: absolute;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  padding: 2px;
-  text-align: center;
-  border-radius: 50%;
-  color: var(--green-dark);
-  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.568);
-          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.568);
-  border: none;
-}
-
-#our-result #our-result-carousel-container #our-result-carousel .glide__arrows .glide__arrow:hover {
-  background: var(--green-q-light) !important;
-}
-
-#our-result #our-result-carousel-container #our-result-carousel .glide__arrows .glide__arrow .iconify {
-  font-size: 30px;
-}
-
-#our-result #our-result-carousel-container #our-result-carousel .glide__arrows .glide__arrow.glide__arrow--left {
-  left: 10px;
-  background: white;
-}
-
-#our-result #our-result-carousel-container #our-result-carousel .glide__arrows .glide__arrow.glide__arrow--right {
-  right: 10px;
-  background: white;
 }
 
 #our-result .shape, #our-result .shape-2 {
   padding: 50px;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   position: absolute;
   z-index: -1;
@@ -859,6 +826,28 @@ section#why-learnedu .counters-container .col > .counter-card h3 {
   color: var(--color);
 }
 
+@media screen and (max-width: 420px) {
+  section#why-learnedu .feature-card-wrapper {
+    margin: 10px auto;
+  }
+  section#why-learnedu .feature-card-wrapper .feature-card img {
+    padding: 10px 7px;
+    max-width: 60px;
+  }
+  section#why-learnedu .feature-card-wrapper .feature-card h3 {
+    font-size: 18px;
+  }
+  section#why-learnedu .feature-card-wrapper .feature-card p {
+    font-size: 14px;
+  }
+  section#why-learnedu .counters-container .col > .counter-card h3 {
+    font-size: 18px;
+  }
+  section#why-learnedu .counters-container .col > .counter-card p {
+    font-size: 18px;
+  }
+}
+
 @-webkit-keyframes zoom-up-down {
   from {
     -webkit-transform: scale(0);
@@ -1029,5 +1018,167 @@ section#review #review-slider > .container img.quote._2 {
   right: 0px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+@media screen and (max-width: 740px) {
+  section#review #review-slider > .container img.quote {
+    width: 70px !important;
+  }
+  section#review #review-slider > .container img.quote._1 {
+    top: 5px;
+  }
+  section#review #review-slider > .container img.quote._2 {
+    bottom: 5px;
+  }
+}
+
+/*  ELdu section Css here
+===================================*/
+section#ELdu {
+  min-height: 250px;
+  background: var(--green-semi-light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+section#ELdu .ELdu-text .ELdu-text__box {
+  color: white;
+}
+
+section#ELdu .ELdu-text .ELdu-text__box * {
+  margin-bottom: 0px;
+}
+
+section#ELdu .ELdu-text .ELdu-text__box button {
+  border: 0px;
+  padding: 5px 25px;
+  min-width: 150px;
+  border-radius: 20px;
+  color: var(--green-dark);
+  background: white;
+  margin-top: 10px;
+}
+
+section#ELdu .ELdu-image__img {
+  position: absolute;
+  max-width: 320px;
+  left: 50%;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 650px) {
+  section#ELdu .ELdu-image__img {
+    right: -100px;
+    left: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section#ELdu {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 100px;
+    padding: 10px;
+  }
+  section#ELdu .ELdu-image__img {
+    position: static;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-top: -50px;
+    width: 100%;
+  }
+  section#ELdu > .container {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  section#ELdu > .container .ELdu-text__box {
+    margin-top: 20px;
+    text-align: center;
+  }
+  section#ELdu > .container .ELdu-text__box h1 {
+    font-size: 25px;
+  }
+}
+
+/* footer CSS
+===================================*/
+footer#footer {
+  --bg: #373d46;
+  --color: #646b75;
+  background: var(--bg);
+  color: var(--color);
+  padding: 30px 0;
+  padding-bottom: 10px;
+}
+
+footer#footer .logo-and-title {
+  text-align: center;
+}
+
+footer#footer .logo-and-title img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+footer#footer .logo-and-title h2 {
+  line-height: 12px;
+}
+
+footer#footer .logo-and-title h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+footer#footer .logo-and-title > .icons .iconify {
+  font-size: 35px;
+  margin: 0 5px;
+}
+
+footer#footer .contact-us__form {
+  text-align: center;
+}
+
+footer#footer .contact-us__form input,
+footer#footer .contact-us__form textarea {
+  background: #444b55 !important;
+  border: none;
+  margin-bottom: 10px;
+  resize: none;
+  color: #868a8f;
+  font-weight: 500;
+}
+
+footer#footer .contact-us__form input:focus, footer#footer .contact-us__form input:active,
+footer#footer .contact-us__form textarea:focus,
+footer#footer .contact-us__form textarea:active {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+footer#footer .contact-us__form button[type="submit"] {
+  border: none;
+  background: var(--color);
+  color: var(--bg);
+  padding: 5px 15px;
+  font-weight: bold;
+  border-radius: 50px;
 }
 /*# sourceMappingURL=style.css.map */
